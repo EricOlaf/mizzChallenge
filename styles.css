@@ -1,16 +1,21 @@
 * {
+  position: relative;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  position: relative;
+  background: #06192c;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-body {
-  background: #06192c;
+.all {
   padding: 0 5em;
   position: relative;
   text-align: center;
@@ -60,14 +65,14 @@ header > h2 {
 .bucket-div > h3 {
   font-style: italic;
   font-size: 1.5rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-weight: 80;
 }
 
 .bucket-div > p {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0 1em;
-  padding-bottom: 3.5rem;
+  padding-bottom: 2rem;
   font-weight: 80;
 }
 
@@ -80,4 +85,27 @@ header > h2 {
   font-weight: 50;
   font-style: italic;
   padding: 6rem 4.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .allInfo {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+  }
+  .bd-one {
+    grid-column: 1/5;
+  }
+  .bd-two {
+    grid-column: 5/9;
+  }
+  .bd-three {
+    grid-column: 9/13;
+  }
+  .lgq-one {
+    grid-column: 1/7;
+  }
+  .lgq-two {
+    grid-column: 7/13;
+  }
 }
